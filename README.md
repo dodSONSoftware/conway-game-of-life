@@ -1,3 +1,5 @@
+![Game of Life glider icon and wordmark](docs/game-of-life-wordmark.png)
+
 # Game of Life
 
 **Release:** Aluminum Ferret — version 0.2.0.
