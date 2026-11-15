@@ -1,3 +1,5 @@
+#![cfg_attr(all(target_os = "windows", not(debug_assertions)), windows_subsystem = "windows")]
+
 use bevy::prelude::*;
 use bevy_egui::{egui, EguiContexts, EguiPlugin, EguiPrimaryContextPass};
 use game_of_life_bevy::{patterns::{self, Pattern}, settings::{Settings,Swatch,CellShape}, simulation::{Cell,CellKind,Cells,Universe,LifeRule}};
@@ -70,7 +72,7 @@ impl Default for LifeApp {
         Self { fit_about: true, show_license: false, toolbar_brand: None, universe: Universe::new(start.clone()), initial:start,snapshot:None,settings,
             running:false,accumulator:0.,actual_gps:0.,measured_steps:0,measure_time:0.,
             center:egui::Vec2::ZERO,zoom:15.,patterns,selected:usize::MAX,search:String::new(),
-            settings_open:false,help_open:false,file_open:false,about_open:false,rules_open:false,path_input:"assets/patterns/puffer1.rle".into(),
+            settings_open:false,help_open:false,file_open:false,about_open:false,rules_open:false,path_input:patterns::pattern_directory().join("puffer1.rle").display().to_string(),
             message:String::new(),stamp:None,stamp_rotation:0,stamp_mirrored:false,stamp_drag_last:None,drawing:false,erasing:false,brush_rng:random_seed(),rectangle_erase:None,rectangle_random:None,applied_ui_scale, viewport_size: egui::vec2(1000., 700.), pending_fit: false, outlier_options: OutlierOptions::default(), outlier_preview: None, outlier_was_running: false, file_picker: Mutex::new(None) }
     }
 }

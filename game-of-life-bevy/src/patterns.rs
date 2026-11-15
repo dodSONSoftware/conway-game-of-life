@@ -109,16 +109,25 @@ pub fn builtin() -> Vec<Pattern> {
     result
 }
 
-/// Load separately sourced LifeWiki RLE assets, when installed locally.
-/// Missing/unsupported assets are skipped rather than presenting fake pattern layouts.
+/// Installed bundles resolve patterns relative to the executable, independent of the working directory.
+pub fn pattern_directory() -> std::path::PathBuf {
+    #[cfg(any(target_os = "macos", target_os = "windows"))]
+    if let Ok(exe) = std::env::current_exe() {
+        #[cfg(target_os = "macos")]
+        let bundled = exe.parent().and_then(|p| p.parent()).map(|p| p.join("Resources/patterns"));
+        #[cfg(target_os = "windows")]
+        let bundled = exe.parent().map(|p| p.join("assets/patterns"));
+        if let Some(path) = bundled.filter(|p| p.is_dir()) {
+            return path;
+        }
+    }
+    std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("assets/patterns")
+}
+
+/// Missing or unsupported optional pattern files are skipped.
 fn load_catalog_patterns() -> Vec<Pattern> {
     let mut loaded = Vec::new();
-    let base = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("assets/patterns");
-    #[cfg(target_os = "macos")]
-    let base = std::env::current_exe().ok()
-        .and_then(|exe| Some(exe.parent()?.parent()?.join("Resources/patterns")))
-        .filter(|dir| dir.is_dir())
-        .unwrap_or(base);
+    let base = pattern_directory();
     for line in include_str!("../assets/patterns/catalog.tsv").lines() {
         let mut fields = line.splitn(4, '\t');
         let (Some(name),Some(category),Some(file),Some(description)) = (fields.next(),fields.next(),fields.next(),fields.next()) else { continue; };

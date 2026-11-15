@@ -8,6 +8,22 @@ A native desktop cellular automaton simulator written in Rust with Bevy and egui
 
 The runnable Rust crate is in [`game-of-life-bevy/`](game-of-life-bevy/); the repository root is not a Cargo workspace. The application starts with an **empty, paused board at generation 0**, using Conway's Life.
 
+## Install Game of Life
+
+Choose the version 0.2.0 installer for your computer.
+
+| Platform | Installer |
+| --- | --- |
+| macOS on Apple Silicon (M-series) | [Download the Apple Silicon package](installers/Game-of-Life-0.2.0-Apple-Silicon.pkg) |
+| macOS on Intel | [Download the Intel Mac package](installers/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
+| Windows x64 (Intel or AMD) | [Download Windows Setup](installers/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
+
+On **macOS**, open the downloaded package, follow the installer prompts, then launch **Game of Life** from Applications. If you’re unsure which Mac package to choose, open **Apple menu → About This Mac** and check the chip or processor.
+
+On **Windows**, run Setup, then open **Game of Life** from the Start menu. Setup installs the app and its bundled patterns for your Windows user account.
+
+These installers are unsigned. macOS and Windows may display a security warning when you open them.
+
 ## Build and run
 
 Requirements:
@@ -30,6 +46,15 @@ On macOS, launch the app bundle to use the glider icon in the Dock. Run these co
 ./scripts/package-macos.sh
 open "target/release/Game of Life.app"
 ```
+
+To build the Windows x64 installer from macOS, install the MinGW-w64 and NSIS tools, then run:
+
+```sh
+rustup target add x86_64-pc-windows-gnu
+./scripts/package-windows.sh
+```
+
+Run the script from `game-of-life-bevy/`. It writes the versioned setup executable to the repository’s `installers/` directory. Setup installs Game of Life for the current Windows user, adds a Start menu shortcut, and places the bundled patterns in `assets/patterns/` beside the executable.
 
 For development, use `cargo run --locked`. Cargo downloads dependencies on the first build; downloading additional pattern packs is optional.
 
