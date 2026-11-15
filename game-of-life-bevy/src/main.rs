@@ -400,7 +400,7 @@ fn interface(mut contexts:EguiContexts, mut state:ResMut<LifeApp>, time:Res<Time
     // Constrain the root layout to the current window, rather than permitting a
     // content-sized Area to extend below the bottom edge when resized.
     let window_rect = ctx.content_rect();
-    egui::Area::new(egui::Id::new("game_root"))
+    let playfield = egui::Area::new(egui::Id::new("game_root"))
         .fixed_pos(window_rect.min)
         .constrain(false)
         .order(egui::Order::Background)
@@ -594,13 +594,13 @@ fn interface(mut contexts:EguiContexts, mut state:ResMut<LifeApp>, time:Res<Time
             egui::ScrollArea::vertical().show(ui,|ui|{help_contents(ui);});
         });
     }
-    egui::CentralPanel::default().frame(egui::Frame::NONE).show(root,|ui|{ field(ui,&mut state); });
-    });
+    egui::CentralPanel::default().frame(egui::Frame::NONE).show(root,|ui|{ field(ui,&mut state); }).response.rect
+    }).inner;
     if state.outlier_preview.is_some() {outlier_window(ctx,&mut state);}
     if state.rules_open {rules_window(ctx,&mut state);}
     if state.settings_open {settings_window(ctx,&mut state);}
     if state.file_open {file_window(ctx,&mut state);}
-    if state.about_open {about_window(ctx,&mut state);}
+    if state.about_open {about_window(ctx,&mut state, playfield);}
 
     Ok(())
 }
@@ -1082,7 +1082,7 @@ fn file_window(ctx:&egui::Context,state:&mut LifeApp){
     });
     state.file_open &= open;
 }
-fn about_window(ctx: &egui::Context, state: &mut LifeApp) {
+fn about_window(ctx: &egui::Context, state: &mut LifeApp, playfield: egui::Rect) {
     let mut open = state.about_open;
     let mut dismissed = false;
     let id = egui::Id::new("about_modal");
@@ -1092,7 +1092,7 @@ fn about_window(ctx: &egui::Context, state: &mut LifeApp) {
     let bounds = ctx.content_rect();
     let fit = std::mem::take(&mut state.fit_about);
     let compact = egui::vec2(450.0, 412.0).min(bounds.size());
-    let centered = bounds.center() - compact * 0.5;
+    let start = playfield.left_top() + egui::vec2(16.0, 16.0);
     let previous_rect = ctx.memory(|memory| memory.area_rect(id));
     let was_showing_license = state.show_license;
     let mut license_height = 0.0;
@@ -1100,7 +1100,7 @@ fn about_window(ctx: &egui::Context, state: &mut LifeApp) {
         .id(id)
         .order(layer.order)
         .pivot(egui::Align2::LEFT_TOP)
-        .default_pos(centered)
+        .default_pos(start)
         .default_size(compact)
         .min_size([265.0, 160.0])
         .collapsible(false)
@@ -1109,7 +1109,7 @@ fn about_window(ctx: &egui::Context, state: &mut LifeApp) {
         .vscroll(true)
         .open(&mut open);
     if fit {
-        window = window.current_pos(centered).fixed_size(compact);
+        window = window.current_pos(start).fixed_size(compact);
     } else if let Some((origin, size)) = ctx.data_mut(|data| data.remove_temp::<(egui::Pos2, egui::Vec2)>(id.with("expanded_rect"))) {
         window = window.current_pos(origin).fixed_size(size);
     }
