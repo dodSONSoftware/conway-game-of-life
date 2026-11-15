@@ -25,3 +25,5 @@ __pycache__/
 # Captured benchmark data
 benchmarks/*.csv
 benchmarks/*.json
+GIT_COMMIT_MESSAGE
+GAME_OF_LIFE_DESIGN.md
