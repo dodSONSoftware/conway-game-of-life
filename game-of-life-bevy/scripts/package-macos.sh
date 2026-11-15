@@ -1,6 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
+version=$(<../VERSION)
 cargo build --locked --release
 app="target/release/Game of Life.app"
 resources="$app/Contents/Resources"
@@ -17,7 +18,6 @@ for size in 16 32 128 256 512; do
     sips -z "$double" "$double" assets/app-icon.png --out "$icons/icon_${size}x${size}@2x.png" >/dev/null
 done
 iconutil -c icns "$icons" -o "$resources/GameOfLife.icns"
-version=$(awk -F '"' '/^version =/ {print $2; exit}' Cargo.toml)
 cat > "$app/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <plist version="1.0"><dict>

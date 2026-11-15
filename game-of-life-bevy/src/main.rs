@@ -1123,7 +1123,7 @@ fn about_window(ctx: &egui::Context, state: &mut LifeApp) {
             ui.separator();
             ui.add_space(8.0);
             ui.heading("Game of Life");
-            ui.weak(concat!("Version ", env!("CARGO_PKG_VERSION")));
+            ui.weak(concat!("Version ", include_str!("../../VERSION")).trim_end());
             ui.add_space(10.0);
             ui.label("Draw cells or place patterns and watch them evolve under the rules of John Horton Conway’s 1970 classic, the Game of Life, or one of four other cellular automata.");
             ui.add_space(12.0);
