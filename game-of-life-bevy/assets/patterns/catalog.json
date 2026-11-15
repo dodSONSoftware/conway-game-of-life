@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Eater 1 (Fishhook)",
+    "category": "Eaters",
+    "file": "eater1.rle",
+    "description": "A seven-cell eater that can absorb appropriately aligned gliders.",
+    "source": "https://conwaylife.com/patterns/eater1.rle"
+  },
+  {
+    "name": "Eater 2",
+    "category": "Eaters",
+    "file": "eater2.rle",
+    "description": "A larger stable glider-eating configuration.",
+    "source": "https://conwaylife.com/patterns/eater2.rle"
+  },
+  {
+    "name": "Eater 3",
+    "category": "Eaters",
+    "file": "eater3.rle",
+    "description": "An alternative stationary glider eater.",
+    "source": "https://conwaylife.com/patterns/eater3.rle"
+  },
+  {
+    "name": "Puffer 1",
+    "category": "Puffers",
+    "file": "puffer1.rle",
+    "description": "A moving structure that leaves persistent debris.",
+    "source": "https://conwaylife.com/patterns/puffer1.rle"
+  },
+  {
+    "name": "Puffer 2",
+    "category": "Puffers",
+    "file": "puffer2.rle",
+    "description": "A second classic puffer configuration.",
+    "source": "https://conwaylife.com/patterns/puffer2.rle"
+  },
+  {
+    "name": "Block-laying Switch Engine",
+    "category": "Puffers",
+    "file": "blocklayingswitchengine.rle",
+    "description": "A moving engine that leaves stationary blocks.",
+    "source": "https://conwaylife.com/patterns/blocklayingswitchengine.rle"
+  },
+  {
+    "name": "Forward Glider Rake",
+    "category": "Rakes",
+    "file": "forwardspacerake.rle",
+    "description": "A moving rake that emits forward-going gliders.",
+    "source": "https://conwaylife.com/patterns/forwardspacerake.rle"
+  },
+  {
+    "name": "Backrake",
+    "category": "Rakes",
+    "file": "backrake2.rle",
+    "description": "A spaceship that emits gliders backward.",
+    "source": "https://conwaylife.com/patterns/backrake2.rle"
+  },
+  {
+    "name": "Space Rake",
+    "category": "Rakes",
+    "file": "spacerake.rle",
+    "description": "A rake that emits spaceships while moving.",
+    "source": "https://conwaylife.com/patterns/spacerake.rle"
+  },
+  {
+    "name": "Breeder 1",
+    "category": "Breeders",
+    "file": "breeder1.rle",
+    "description": "A quadratic-growth breeder producing glider guns and gliders.",
+    "source": "https://conwaylife.com/patterns/breeder1.rle"
+  },
+  {
+    "name": "Spacefiller",
+    "category": "Breeders",
+    "file": "spacefiller.rle",
+    "description": "A fast-growing expanding population structure.",
+    "source": "https://conwaylife.com/patterns/spacefiller.rle"
+  },
+  {
+    "name": "Bunnies",
+    "category": "Methuselahs",
+    "file": "bunnies.rle",
+    "description": "Small start with a long evolution before stabilization.",
+    "source": "https://conwaylife.com/patterns/bunnies.rle"
+  },
+  {
+    "name": "Rabbits",
+    "category": "Methuselahs",
+    "file": "rabbits.rle",
+    "description": "A methuselah notable for a long transient evolution.",
+    "source": "https://conwaylife.com/patterns/rabbits.rle"
+  },
+  {
+    "name": "Herschel",
+    "category": "Methuselahs",
+    "file": "herschel.rle",
+    "description": "A seven-cell active pattern used in Life circuitry.",
+    "source": "https://conwaylife.com/patterns/herschel.rle"
+  },
+  {
+    "name": "Switch Engine",
+    "category": "Methuselahs",
+    "file": "switchengine.rle",
+    "description": "An active engine that generates moving debris.",
+    "source": "https://conwaylife.com/patterns/switchengine.rle"
+  },
+  {
+    "name": "Chapman-Greene Constructor",
+    "category": "Universal Constructors",
+    "file": "chapmangreeneconstructor.rle",
+    "description": "A programmable pattern-construction apparatus.",
+    "source": "https://conwaylife.com/patterns/chapmangreeneconstructor.rle"
+  },
+  {
+    "name": "Gemini",
+    "category": "Universal Constructors",
+    "file": "gemini.mc",
+    "description": "A very large self-constructing spaceship.",
+    "source": "https://conwaylife.com/patterns/gemini.rle"
+  },
+  {
+    "name": "Reverse Caber Tosser",
+    "category": "Universal Constructors",
+    "file": "reversecabertosser.rle",
+    "description": "An enormous universal-construction configuration.",
+    "source": "https://conwaylife.com/patterns/reversecabertosser.rle"
+  }
+]

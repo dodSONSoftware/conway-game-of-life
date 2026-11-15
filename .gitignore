@@ -1,0 +1,27 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Node / TypeScript
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local configuration / editor
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
+
+# Captured benchmark data
+benchmarks/*.csv
+benchmarks/*.json

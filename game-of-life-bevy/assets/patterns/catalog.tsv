@@ -1,0 +1,18 @@
+Eater 1 (Fishhook)	Eaters	eater1.rle	A seven-cell eater that can absorb appropriately aligned gliders.
+Eater 2	Eaters	eater2.rle	A larger stable glider-eating configuration.
+Eater 3	Eaters	eater3.rle	An alternative stationary glider eater.
+Puffer 1	Puffers	puffer1.rle	A moving structure that leaves persistent debris.
+Puffer 2	Puffers	puffer2.rle	A second classic puffer configuration.
+Block-laying Switch Engine	Puffers	blocklayingswitchengine.rle	A moving engine that leaves stationary blocks.
+Forward Glider Rake	Rakes	forwardspacerake.rle	A moving rake that emits forward-going gliders.
+Backrake	Rakes	backrake2.rle	A spaceship that emits gliders backward.
+Space Rake	Rakes	spacerake.rle	A rake that emits spaceships while moving.
+Breeder 1	Breeders	breeder1.rle	A quadratic-growth breeder producing glider guns and gliders.
+Spacefiller	Breeders	spacefiller.rle	A fast-growing expanding population structure.
+Bunnies	Methuselahs	bunnies.rle	Small start with a long evolution before stabilization.
+Rabbits	Methuselahs	rabbits.rle	A methuselah notable for a long transient evolution.
+Herschel	Methuselahs	herschel.rle	A seven-cell active pattern used in Life circuitry.
+Switch Engine	Methuselahs	switchengine.rle	An active engine that generates moving debris.
+Chapman-Greene Constructor	Universal Constructors	chapmangreeneconstructor.rle	A programmable pattern-construction apparatus.
+Gemini	Universal Constructors	gemini.mc	A very large self-constructing spaceship.
+Reverse Caber Tosser	Universal Constructors	reversecabertosser.rle	An enormous universal-construction configuration.

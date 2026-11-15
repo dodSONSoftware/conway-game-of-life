@@ -1,0 +1,17 @@
+# Rust
+/target/
+**/*.rs.bk
+# Node / TypeScript
+node_modules/
+dist/
+coverage/
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Local configuration and secrets
+.env
+.env.*
+*.log
+.DS_Store
