@@ -18,6 +18,11 @@ Choose the version 0.2.0 installer for your computer.
 | macOS on Intel | [Download the Intel Mac package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
 | Windows x64 (Intel or AMD) | [Download Windows Setup](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
 
+Download [SHA256SUMS](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/SHA256SUMS) to the same folder as your installer. Before opening the installer, check it from that folder:
+
+- **macOS (Terminal):** Run `shasum -a 256 -c --ignore-missing SHA256SUMS`. Confirm that your downloaded package is listed with `OK`.
+- **Windows (PowerShell):** Run `Get-FileHash .\Game-of-Life-0.2.0-Windows-x64-Setup.exe -Algorithm SHA256`. Compare the full hash with the line for that filename in `SHA256SUMS`. Uppercase and lowercase letters are equivalent.
+
 On **macOS**, open the downloaded package, follow the installer prompts, then launch **Game of Life** from Applications. If you’re unsure which Mac package to choose, open **Apple menu → About This Mac** and check the chip or processor.
 
 On **Windows**, run Setup, then open **Game of Life** from the Start menu. Setup installs the app and its bundled patterns for your Windows user account.
