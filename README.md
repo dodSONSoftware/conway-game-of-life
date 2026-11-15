@@ -14,9 +14,9 @@ Choose the version 0.2.0 installer for your computer.
 
 | Platform | Installer |
 | --- | --- |
-| macOS on Apple Silicon (M-series) | [Download the Apple Silicon package](installers/Game-of-Life-0.2.0-Apple-Silicon.pkg) |
-| macOS on Intel | [Download the Intel Mac package](installers/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
-| Windows x64 (Intel or AMD) | [Download Windows Setup](installers/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
+| macOS on Apple Silicon (M-series) | [Download the Apple Silicon package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Silicon.pkg) |
+| macOS on Intel | [Download the Intel Mac package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
+| Windows x64 (Intel or AMD) | [Download Windows Setup](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
 
 On **macOS**, open the downloaded package, follow the installer prompts, then launch **Game of Life** from Applications. If you’re unsure which Mac package to choose, open **Apple menu → About This Mac** and check the chip or processor.
 
