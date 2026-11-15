@@ -18,6 +18,8 @@ Choose the version 0.2.0 installer for your computer.
 | macOS on Intel | [Download the Intel Mac package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
 | Windows x64 (Intel or AMD) | [Download Windows Setup](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
 
+All three installers include the compiled application. You only need Rust, Cargo, and other development tools if you build Game of Life from source.
+
 Download [SHA256SUMS](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/SHA256SUMS) to the same folder as your installer. Before opening the installer, check it from that folder:
 
 - **macOS (Terminal):** Run `shasum -a 256 -c --ignore-missing SHA256SUMS`. Confirm that your downloaded package is listed with `OK`.
