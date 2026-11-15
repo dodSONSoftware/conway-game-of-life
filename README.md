@@ -2,7 +2,7 @@
 
 # Game of Life
 
-**Release:** Aluminum Ferret — version 0.2.0.
+**Release:** Iron Mongoose — version 1.0.0.
 
 A native desktop cellular automaton simulator written in Rust with Bevy and egui. Explore a sparse, editable world, stamp classic Life patterns, and visualize predicted births and deaths alongside two generations of history.
 
@@ -10,20 +10,20 @@ The runnable Rust crate is in [`game-of-life-bevy/`](game-of-life-bevy/); the re
 
 ## Install Game of Life
 
-Choose the version 0.2.0 installer for your computer.
+Choose the version 1.0.0 installer for your computer.
 
 | Platform | Installer |
 | --- | --- |
-| macOS on Apple Silicon (M-series) | [Download the Apple Silicon package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Silicon.pkg) |
-| macOS on Intel | [Download the Intel Mac package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Apple-Intel-Silicon.pkg) |
-| Windows x64 (Intel or AMD) | [Download Windows Setup](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/Game-of-Life-0.2.0-Windows-x64-Setup.exe) |
+| macOS on Apple Silicon (M-series) | [Download the Apple Silicon package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v1.0.0/Game-of-Life-1.0.0-Apple-Silicon.pkg) |
+| macOS on Intel | [Download the Intel Mac package](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v1.0.0/Game-of-Life-1.0.0-Apple-Intel-Silicon.pkg) |
+| Windows x64 (Intel or AMD) | [Download Windows Setup](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v1.0.0/Game-of-Life-1.0.0-Windows-x64-Setup.exe) |
 
 All three installers include the compiled application. You only need Rust, Cargo, and other development tools if you build Game of Life from source.
 
-Download [SHA256SUMS](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v0.2.0/SHA256SUMS) to the same folder as your installer. Before opening the installer, check it from that folder:
+Download [SHA256SUMS](https://github.com/dodSONSoftware/conway-game-of-life/releases/download/v1.0.0/SHA256SUMS) to the same folder as your installer. Before opening the installer, check it from that folder:
 
 - **macOS (Terminal):** Run `shasum -a 256 -c --ignore-missing SHA256SUMS`. Confirm that your downloaded package is listed with `OK`.
-- **Windows (PowerShell):** Run `Get-FileHash .\Game-of-Life-0.2.0-Windows-x64-Setup.exe -Algorithm SHA256`. Compare the full hash with the line for that filename in `SHA256SUMS`. Uppercase and lowercase letters are equivalent.
+- **Windows (PowerShell):** Run `Get-FileHash .\Game-of-Life-1.0.0-Windows-x64-Setup.exe -Algorithm SHA256`. Compare the full hash with the line for that filename in `SHA256SUMS`. Uppercase and lowercase letters are equivalent.
 
 On **macOS**, open the downloaded package, follow the installer prompts, then launch **Game of Life** from Applications. If you’re unsure which Mac package to choose, open **Apple menu → About This Mac** and check the chip or processor.
 

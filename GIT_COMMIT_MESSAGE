@@ -1,13 +1,10 @@
-feat: add desktop cellular automaton simulator
+build: package desktop installers and record release checksums
 
-[0.2.0] Aluminum Ferret
+[1.0.0] Iron Mongoose
 
-- Add the Rust and Bevy simulator with five rules, generation history, forecasts, and snapshots.
-- Include pattern import and placement, outlier analysis, persistent preferences, and core tests.
-- Package the macOS app with bundled patterns, glider artwork, and a branded About dialog.
-- Include design documentation, build instructions, and the MIT license.
-- VERSION: Advance the repository release from 0.1.0 to 0.2.0.
-- README.md: Identify the Aluminum Ferret release.
-- CHANGELOG.md: Record the simulator and packaging features.
+- Add Apple Silicon, Intel Mac, and Windows x64 installers with verified SHA-256 checksums.
+- Advance VERSION from 0.2.0 to 1.0.0 and align the Rust package metadata.
+- Update README.md with the release name, installer links, and verification instructions.
+- Record the About box placement and repository link changes in CHANGELOG.md.
 
 developed by Randel Dodson and AI
